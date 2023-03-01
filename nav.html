@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .header img {
+        width: 100px;
+        padding: 20px 0px;
+      }
+      .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(5, 56, 60);
+        z-index: 999;
+      }
+      .nav-menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap:20px;
+      
+      }
+      .nav-menu ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:40px;
+        list-style: none;
+        transition: 0.9s ease-in-out;
+      }
+      .nav-menu ul a{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        text-transform: uppercase;
+      }
+      .nav-icon{
+        color: rgb(255, 255, 255);
+        border: 3px solid rgb(3, 1, 124);
+        padding: 6px;
+        display: none;
+      }
+       .icon-close{
+          display: none;
+        }
+      .nav-menu ul{
+        position: relative;
+        transition: 0.9s ease-in-out;
+        cursor: pointer;
+      }
+      .nav-menu ul ul {
+    position: absolute;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    display: block;
+    background-color: #f1f1f1;
+  display: none;
+    padding: 40px;
+   left: 100%;
+   
+    transition: 0.9s ease-in-out;
+    min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 12px 16px;
+}
+.nav-menu ul li:hover >ul{
+display: block;
+transition: 0.9s ease-in-out;
+}
+
+
+
+     
+@media only screen and (max-width: 768px){
+       
+  .nav-menu {
+    opacity: 4.4;
+    background-color: #0a0909;
+    width: 100%;
+    /* z-index: -1; */
+    position: absolute;
+    top: 127px;
+    height: 100vh;
+    left: 100%;
+
+        }
+        .nav-menu .show{
+          left: 0;
+        }
+        .nav-menu ul{
+          flex-direction: column;
+          /* justify-content: center; */
+          /* align-items:center ; */
+        }
+       
+        .nav-icon{
+        display: block;
+      }
+        .open-icon{
+          display: block;
+          width: 30px;
+        }
+       
+      }
+    </style>
+  </head>
+  <body>
+   <div class="header ">
+    <img src="assetes/images/chf-logo.png" alt="">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
+        <li class="dropdown"><a href="#">Service&nbsp;<i class="fa fa-caret-down" style="font-size:24px"></i></a>
+        <ul>
+          <li><a href="#"></a>Php</li>
+          <li><a href="#"></a>Php</li>
+          <li><a href="#"></a>Php</li>
+          <li><a href="#"></a>Php</li>
+        </ul>
+        </li>
+          
+      </ul>
+      
+     
+    </nav>
+    <div class="nav-icon">
+      <i class="fa fa-bars icon-open" style="font-size:30px"></i>
+      <i class="fa fa-window-close-o icon-close" style="font-size:30px"></i>
+    </div>
+   </div>
+    <!-- script start here  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+  $(".icon-open").click(function(){
+    $("ul").toggleClass('show');
+  });
+});
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toggles/2.0.4/toggles.min.js" integrity="sha512-lySBQOgEfeKKur9p/mvHqXwDhzW5HwW5XtLcl5OCKQDvDBVhNdBblwvu/XIcF6IqYmM3bsmRcbZEzvYy/KADeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
